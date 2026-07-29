@@ -1,0 +1,1618 @@
+ast login: Mon Jul 27 15:16:34 on ttys000
+You have new mail.
+/Users/josh/Documents/n8n_SMS_LeadGen/run.command ; exit;
+josh@Joshuas-Laptop ~ % /Users/josh/Documents/n8n_SMS_LeadGen/run.command ; exit;
+Installing dependencies...
+
+[notice] A new release of pip is available: 25.1.1 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+
+Lead Gen Pipeline
+Open in browser: http://127.0.0.1:8000
+Press Ctrl+C to stop.
+
+INFO:     Will watch for changes in these directories: ['/Users/josh/Documents/n8n_SMS_LeadGen']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [19058] using WatchFiles
+INFO:     Started server process [19060]
+INFO:     Waiting for application startup.
+2026-07-27 16:03:34,068 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-07-27 16:03:35,853 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-07-27 16:03:35,853 [INFO] app.scheduler: Scrape queue poller started — active every 5s, idle every 20s
+2026-07-27 16:03:36,425 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-07-27 16:03:36,425 [INFO] app.scheduler: Telegram attention poller started — every 60s
+2026-07-27 16:03:36,425 [INFO] apscheduler.scheduler: Added job "Daily Lead Pipeline" to job store "default"
+2026-07-27 16:03:36,425 [INFO] apscheduler.scheduler: Added job "Scrape Queue Poller" to job store "default"
+2026-07-27 16:03:36,425 [INFO] apscheduler.scheduler: Added job "Telegram Attention Poller" to job store "default"
+2026-07-27 16:03:36,425 [INFO] apscheduler.scheduler: Scheduler started
+2026-07-27 16:03:36,425 [INFO] app.scheduler: Scheduler started — daily pipeline at 09:00 (local time), enabled=True
+2026-07-27 16:03:36,425 [INFO] app.main: Lead Gen Pipeline app started
+INFO:     Application startup complete.
+INFO:     127.0.0.1:56380 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56380 - "GET /static/css/dashboard.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56381 - "GET /static/js/dashboard.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56381 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56380 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56382 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56383 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:03:56,431 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:03:56 BST)" (scheduled at 2026-07-27 16:03:56.425058+01:00)
+2026-07-27 16:03:56,432 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:04:16 BST)" executed successfully
+INFO:     127.0.0.1:56398 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56399 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56400 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56401 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56416 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56417 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56418 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56419 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:04:16,438 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:04:36 BST)" (scheduled at 2026-07-27 16:04:16.432288+01:00)
+INFO:     127.0.0.1:56432 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56433 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56434 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:04:16,981 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:04:36 BST)" executed successfully
+INFO:     127.0.0.1:56435 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56452 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:04:28,910 [INFO] app.pipeline.runner: Pipeline started (manual) at 2026-07-27T16:04:28
+2026-07-27 16:04:28,910 [INFO] app.pipeline.runner: Starting step 1: Import Leads
+INFO:     127.0.0.1:56453 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56458 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:04:31,768 [WARNING] sheets: Worksheet 'Dynamic Lead Sheet' headers differ. Expected ['Facebook Link', 'Business Name', 'Scrape', 'Phone Number 1', 'Phone Number 2', 'Business Owner', 'Website Link', 'Lead Activity', 'Message1', 'Message2', 'va', 'refined'], found ['Facebook Link', 'Business Name', 'Scrape', 'Phone Number 1', 'Phone Number 2', 'Business Owner', 'Website Link', 'Lead Activity', 'Message1', 'Message2', 'refined']
+INFO:     127.0.0.1:56458 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56458 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:04:33,927 [INFO] app.pipeline.steps.step1_import_leads: Imported 2145 lead(s) to Dynamic Lead Sheet
+2026-07-27 16:04:33,928 [INFO] app.pipeline.runner: Step 1 finished: success — Imported 2145 lead(s) to Dynamic Lead Sheet
+2026-07-27 16:04:33,929 [INFO] app.pipeline.runner: Imported 2145 lead(s) to Dynamic Lead Sheet
+2026-07-27 16:04:33,929 [INFO] app.pipeline.runner: Pipeline finished at 2026-07-27T16:04:33 — All 1 steps completed successfully
+INFO:     127.0.0.1:56452 - "POST /api/pipeline/steps/1/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56458 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56452 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56465 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:04:36,429 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:05:36 BST)" (scheduled at 2026-07-27 16:04:36.425110+01:00)
+2026-07-27 16:04:36,430 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:05:36 BST)" executed successfully
+2026-07-27 16:04:36,987 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:04:56 BST)" (scheduled at 2026-07-27 16:04:36.981363+01:00)
+2026-07-27 16:04:37,557 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:04:57 BST)" executed successfully
+INFO:     127.0.0.1:56479 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56480 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56481 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56482 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:04:45,283 [INFO] app.pipeline.runner: Pipeline started (manual) at 2026-07-27T16:04:45
+2026-07-27 16:04:45,284 [INFO] app.pipeline.runner: Starting step 2: Dedupe
+2026-07-27 16:04:45,329 [INFO] app.pipeline: Step 2: loaded 2976 Facebook link(s) from allimported (column: link)
+2026-07-27 16:04:46,045 [INFO] app.pipeline: Step 2: no duplicates found in Dynamic Lead Sheet
+2026-07-27 16:04:46,045 [INFO] app.pipeline.runner: Step 2 finished: success — No duplicates — 2145 lead(s) in Dynamic Lead Sheet
+2026-07-27 16:04:46,045 [INFO] app.pipeline.runner: Step 2: loaded 2976 Facebook link(s) from allimported (column: link)
+2026-07-27 16:04:46,045 [INFO] app.pipeline.runner: Step 2: no duplicates found in Dynamic Lead Sheet
+2026-07-27 16:04:46,045 [INFO] app.pipeline.runner: Pipeline finished at 2026-07-27T16:04:46 — All 1 steps completed successfully
+INFO:     127.0.0.1:56479 - "POST /api/pipeline/steps/2/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56480 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56481 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56482 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56479 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56480 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56481 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56482 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56498 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56499 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56500 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:04:57,562 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:05:17 BST)" (scheduled at 2026-07-27 16:04:57.556807+01:00)
+INFO:     127.0.0.1:56501 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:04:58,184 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:05:18 BST)" executed successfully
+INFO:     127.0.0.1:56516 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56517 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56518 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56519 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56536 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56537 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56538 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56539 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:05:18,188 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:05:38 BST)" (scheduled at 2026-07-27 16:05:18.183921+01:00)
+2026-07-27 16:05:18,189 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:05:38 BST)" executed successfully
+2026-07-27 16:05:21,583 [INFO] app.pipeline.runner: Pipeline started (manual) at 2026-07-27T16:05:21
+2026-07-27 16:05:21,583 [INFO] app.pipeline.runner: Starting step 3: Entity Screen
+2026-07-27 16:05:21,583 [INFO] app.pipeline: Step 3: entity screen on Dynamic Lead Sheet (batch 10, auto-person threshold 0.88)
+2026-07-27 16:05:22,233 [WARNING] sheets: Worksheet 'Dynamic Lead Sheet' headers differ. Expected ['Facebook Link', 'Business Name', 'Scrape', 'Phone Number 1', 'Phone Number 2', 'Business Owner', 'Website Link', 'Lead Activity', 'Message1', 'Message2', 'va', 'refined'], found ['Facebook Link', 'Business Name', 'Scrape', 'Phone Number 1', 'Phone Number 2', 'Business Owner', 'Website Link', 'Lead Activity', 'Message1', 'Message2', 'refined']
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:05:23,111 [INFO] app.entity.screen: Entity screen person row 2 (Amanda West Kassis): profile.php URL with personal name pattern
+2026-07-27 16:05:23,111 [INFO] app.entity.screen: Entity screen person row 3 (George Taylor): profile.php URL with personal name pattern
+2026-07-27 16:05:23,111 [INFO] app.entity.screen: Entity screen tagged business row 5 (Mr. Down's Tutoring Services): business keywords in name
+2026-07-27 16:05:23,111 [INFO] app.entity.screen: Entity screen person row 7 (Bradley Curtis): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 8 (Demi Easton): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 10 (Wuraola Fasugba): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 11 (Dav Mather): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 12 (Michael Faltes): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen tagged business row 13 (Sparkpro Carpet Cleaning): business keywords in name
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen tagged business row 14 (Pinnacle Builders - Leeds): business keywords in name
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 15 (Prime Touch): profile.php URL with personal name pattern
+2026-07-27 16:05:23,112 [INFO] app.entity.screen: Entity screen person row 16 (Kay Baylor): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 17 (Sara Amin): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 18 (Tess Louise): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 20 (Lucy Bailey): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 21 (James Mutuku): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 23 (Adam Aschoff): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 24 (Clubnight Events): profile.php URL with personal name pattern
+2026-07-27 16:05:23,113 [INFO] app.entity.screen: Entity screen person row 25 (Child Contact Plymouth): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen tagged business row 26 (Paving Stones Direct UK Ltd): business keywords in name
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 27 (Tom Ryan): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 28 (Beatrice Whalin): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 29 (Courtney Tavares): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 31 (Matthew Zakrzewski): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 32 (Lucy Richards): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 33 (Roy Mccormack): profile.php URL with personal name pattern
+2026-07-27 16:05:23,114 [INFO] app.entity.screen: Entity screen person row 35 (Bingo Bango): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 36 (Jon Dennison): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 37 (Brian Fisher): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 38 (Manjola Strati Rubis): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 39 (Curious Caterpillar Tutoring): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 40 (Erin Short): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 41 (Matelot Merchandise): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 42 (Jacob Wright): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 43 (Divid Aaron): profile.php URL with personal name pattern
+2026-07-27 16:05:23,115 [INFO] app.entity.screen: Entity screen person row 44 (Natalie Henderson): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 45 (Stefanie Lynn Knauss): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 46 (Ahmad Magableh): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen tagged business row 47 (Concept Claim Solutions - Torquay & Plymouth): business keywords in name
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 49 (Plymouths Patriotic Christians): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 50 (Francisco Trejo): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 51 (Donna Vecchi Osborn): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 52 (Carla Rosaleen): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 53 (Rebecca Hopkinson): profile.php URL with personal name pattern
+2026-07-27 16:05:23,116 [INFO] app.entity.screen: Entity screen person row 55 (Beauty Works): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 56 (Andrea Dickinson): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 57 (Dan Bathalon): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 59 (Maikele Silva): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 60 (Jagath Kumara): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 61 (Ann Morrish): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 62 (Joshua Berney): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 63 (Cornerstone Business Development): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 64 (Austin Lundbohm): profile.php URL with personal name pattern
+2026-07-27 16:05:23,117 [INFO] app.entity.screen: Entity screen person row 65 (Simon Humphrey): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 66 (Lorraine Morris): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen tagged business row 67 (JLC Window Cleaning): business keywords in name
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 68 (Nathan Lyndon): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 69 (Emily Fisher): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 70 (Thais Borin Cavalheiro): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 71 (Rockenbach Fabio): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 73 (Oscar Howells): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 76 (Maura Fleming): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 77 (Gillian Paull): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 78 (Bill Barron): profile.php URL with personal name pattern
+2026-07-27 16:05:23,118 [INFO] app.entity.screen: Entity screen person row 79 (Carlin Golden): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 80 (Denise Sherman): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 82 (Lisa Britt): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 83 (Indigolea Hendrick): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 86 (Stuart Clark): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen tagged business row 87 (I.K Building Services Plymouth): business keywords in name
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 88 (Katie Victoria): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 90 (Shep Sheppard): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 92 (Gary Gates): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 93 (Sarah Penny): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 94 (Robertshunni): profile.php URL with personal name pattern
+2026-07-27 16:05:23,119 [INFO] app.entity.screen: Entity screen person row 96 (Maisie Millen): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 97 (Mildred Parker): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 98 (Osama Adel): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 99 (Build Brief): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 100 (Yasmeen Yaso): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 101 (Lilian Cabral Andrade): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 102 (Christian Ebuka): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 103 (Hospital Radio Plymouth): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 105 (Daniel Williams): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 106 (Alan Clancy): profile.php URL with personal name pattern
+2026-07-27 16:05:23,120 [INFO] app.entity.screen: Entity screen person row 107 (Nigel Bambi Edwards): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 110 (Connor Teifion Bolt): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 114 (Nobodys Fave): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 115 (Tracy Simpson): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 116 (Miss Candle): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 117 (Bart Forest): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 118 (Emily Smith): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen tagged business row 119 (Magpies Nest Cleaning): business keywords in name
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 120 (Karen Vaz): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 121 (Lynda Leadbetter): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 123 (The Learning Paddocks): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 124 (Elementree Arborist): profile.php URL with personal name pattern
+2026-07-27 16:05:23,121 [INFO] app.entity.screen: Entity screen person row 125 (Kizzy Winstone): profile.php URL with personal name pattern
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:05:24,092 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:05:29,993 [INFO] app.entity.screen: Entity screen person row 30 (Angélica Araújo): The name is a personal name.
+2026-07-27 16:05:29,993 [INFO] app.entity.screen: Entity screen person row 48 (Edīt Plymouth): The name is a personal name.
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:05:30,931 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:05:36,429 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:06:36 BST)" (scheduled at 2026-07-27 16:05:36.425110+01:00)
+2026-07-27 16:05:36,429 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:06:36 BST)" executed successfully
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:05:38,190 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:00:20], next run at: 2026-07-27 16:05:58 BST)" (scheduled at 2026-07-27 16:05:38.189244+01:00)
+2026-07-27 16:05:38,191 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:06:38 BST)" executed successfully
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:05:39,427 [INFO] app.entity.screen: Entity screen person row 84 (Renée Phippen): The name appears to be an individual's name.
+2026-07-27 16:05:39,427 [INFO] app.entity.screen: Entity screen person row 85 (John Hallett-Commander): The name appears to be an individual's name.
+INFO:     127.0.0.1:56549 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:05:40,385 [INFO] httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:06:16,744 [WARNING] sheets: Sheets read quota hit — pausing API reads for 90s
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:06:18,771 [WARNING] app.entity.screen: Entity screen person row deletes hit quota (attempt 1/8)
+2026-07-27 16:06:18,771 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (88s left)
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:06:36,428 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:07:36 BST)" (scheduled at 2026-07-27 16:06:36.425110+01:00)
+2026-07-27 16:06:36,428 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:07:36 BST)" executed successfully
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:06:38,196 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:07:38 BST)" (scheduled at 2026-07-27 16:06:38.191537+01:00)
+2026-07-27 16:06:38,197 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:07:38 BST)" executed successfully
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:06:48,773 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (58s left)
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:07:18,776 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (28s left)
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:07:36,430 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:08:36 BST)" (scheduled at 2026-07-27 16:07:36.425110+01:00)
+2026-07-27 16:07:36,430 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:08:36 BST)" executed successfully
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:07:38,203 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:08:38 BST)" (scheduled at 2026-07-27 16:07:38.197146+01:00)
+2026-07-27 16:07:38,203 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:08:38 BST)" executed successfully
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:07:47,360 [WARNING] sheets: Sheets read quota hit — pausing API reads for 90s
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:07:47,746 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (90s left)
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:08:17,749 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (60s left)
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:08:36,430 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:09:36 BST)" (scheduled at 2026-07-27 16:08:36.425110+01:00)
+2026-07-27 16:08:36,430 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:09:36 BST)" executed successfully
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:08:38,209 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:09:38 BST)" (scheduled at 2026-07-27 16:08:38.203750+01:00)
+2026-07-27 16:08:38,210 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:09:38 BST)" executed successfully
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:08:47,754 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (30s left)
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:09:17,854 [WARNING] sheets: Sheets read quota hit — pausing API reads for 90s
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:09:18,179 [WARNING] app.entity.screen: Entity screen person row deletes hit quota (attempt 2/8)
+2026-07-27 16:09:18,179 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (90s left)
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:09:36,430 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:10:36 BST)" (scheduled at 2026-07-27 16:09:36.425110+01:00)
+2026-07-27 16:09:36,430 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:10:36 BST)" executed successfully
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:09:38,213 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:10:38 BST)" (scheduled at 2026-07-27 16:09:38.210173+01:00)
+2026-07-27 16:09:38,214 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:10:38 BST)" executed successfully
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:09:48,187 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (60s left)
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:10:18,196 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (30s left)
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56558 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56549 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56551 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:10:36,432 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:11:36 BST)" (scheduled at 2026-07-27 16:10:36.425110+01:00)
+2026-07-27 16:10:36,432 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:11:36 BST)" executed successfully
+2026-07-27 16:10:38,220 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:11:38 BST)" (scheduled at 2026-07-27 16:10:38.214192+01:00)
+2026-07-27 16:10:38,220 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:11:38 BST)" executed successfully
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+2026-07-27 16:11:30,315 [WARNING] sheets: Sheets read quota hit — pausing API reads for 90s
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:11:30,463 [WARNING] app.entity.screen: Entity screen person row deletes hit quota (attempt 3/8)
+2026-07-27 16:11:30,463 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (90s left)
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:11:36,429 [INFO] apscheduler.executors.default: Running job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:12:36 BST)" (scheduled at 2026-07-27 16:11:36.425110+01:00)
+2026-07-27 16:11:36,430 [INFO] apscheduler.executors.default: Job "Telegram Attention Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:12:36 BST)" executed successfully
+INFO:     127.0.0.1:56977 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:11:38,226 [INFO] apscheduler.executors.default: Running job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:12:38 BST)" (scheduled at 2026-07-27 16:11:38.220746+01:00)
+2026-07-27 16:11:38,227 [INFO] apscheduler.executors.default: Job "Scrape Queue Poller (trigger: interval[0:01:00], next run at: 2026-07-27 16:12:38 BST)" executed successfully
+INFO:     127.0.0.1:56996 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56976 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+2026-07-27 16:12:00,467 [INFO] app.entity.screen: Entity screen waiting for Sheets quota (60s left)
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57111 - "GET /api/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /api/pipeline/logs?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /api/scrape-progress HTTP/1.1" 200 OK
+I

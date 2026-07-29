@@ -1,0 +1,15 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+autoleadverification*.json
+credentials/*.json
+!credentials/fb_cookies.example.json
+!credentials/.gitkeep
+config/groups.json
+.DS_Store
+data/

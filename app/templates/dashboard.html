@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Gen Pipeline</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Lead Gen Pipeline</h1>
+        <p class="subtitle">Lead Manager · Dynamic Lead Sheet</p>
+      </div>
+      <div class="header-actions">
+        <button id="btn-abandon-run" class="btn btn-danger btn-abandon" type="button" hidden>
+          Abandon run
+        </button>
+        <button id="btn-run-all" class="btn btn-primary" type="button">
+          <span class="btn-run-all-label">Run All Steps</span>
+          <span class="btn-run-all-spinner" hidden>Running…</span>
+        </button>
+        <span id="pipeline-badge" class="badge badge-idle">Idle</span>
+      </div>
+    </div>
+    <div id="pipeline-progress-wrap" class="pipeline-progress-wrap" hidden>
+      <div class="pipeline-progress-meta">
+        <span id="pipeline-progress-label">Pipeline running</span>
+        <span id="pipeline-progress-pct">0%</span>
+      </div>
+      <div class="progress-track progress-track-lg">
+        <div id="pipeline-progress-bar" class="progress-bar"></div>
+      </div>
+      <span id="pipeline-progress-eta" class="progress-eta"></span>
+      <ol id="pipeline-step-strip" class="pipeline-step-strip" hidden>
+        {% for step in steps %}
+        <li class="pipeline-step-chip" data-strip-step="{{ step.id }}">
+          <span class="pipeline-step-chip-ring" aria-hidden="true"></span>
+          <span class="pipeline-step-chip-num">{{ step.id }}</span>
+          <span class="pipeline-step-chip-label">{{ step.name }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div id="pipeline-outcome" class="pipeline-outcome" hidden>
+      <div class="pipeline-outcome-inner">
+        <strong id="pipeline-outcome-title"></strong>
+        <p id="pipeline-outcome-detail"></p>
+        <p id="pipeline-outcome-stats" class="pipeline-outcome-stats"></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>Configuration</h2>
+        <dl class="config-list">
+          <dt>Schedule</dt>
+          <dd id="cfg-schedule">—</dd>
+          <dt>Scheduler</dt>
+          <dd id="cfg-scheduler">—</dd>
+          <dt>Next run</dt>
+          <dd id="cfg-next-run">—</dd>
+          <dt>Last run</dt>
+          <dd id="cfg-last-run">—</dd>
+          <dt>Sheets</dt>
+          <dd id="cfg-sheets">—</dd>
+          <dt>Dynamic Lead</dt>
+          <dd id="cfg-dynamic">—</dd>
+          <dt>allimported</dt>
+          <dd id="cfg-imported">—</dd>
+          <dt>Ready to Contact</dt>
+          <dd id="cfg-ready">—</dd>
+          <dt>Telegram</dt>
+          <dd id="cfg-telegram">—</dd>
+        </dl>
+      </section>
+
+      <section class="panel panel-attention" id="attention-panel" hidden>
+        <h2>Needs attention</h2>
+        <ul id="attention-list" class="attention-list"></ul>
+        <button
+          id="btn-resume-step1"
+          class="btn btn-sm btn-primary"
+          type="button"
+          hidden
+        >
+          Resume Step 1
+        </button>
+      </section>
+
+      <section class="panel panel-leads">
+        <h2>Upload leads</h2>
+        <p class="panel-hint">
+          Step 1: paste or upload a list with <strong>Facebook Link</strong> and
+          <strong>Business Name</strong> (CSV, TSV, or one line per lead).
+        </p>
+        <label class="field-label" for="leads-upload-input">Lead list</label>
+        <textarea
+          id="leads-upload-input"
+          class="leads-input"
+          rows="7"
+          spellcheck="false"
+          placeholder="https://facebook.com/..., Business Name&#10;https://facebook.com/..., Another Business"
+        ></textarea>
+        <div class="leads-actions">
+          <label class="btn btn-sm btn-secondary leads-file-label" for="leads-file-input">
+            Choose file
+          </label>
+          <input
+            id="leads-file-input"
+            class="leads-file-input"
+            type="file"
+            accept=".csv,.tsv,.txt,text/csv,text/plain"
+          />
+          <button id="btn-upload-leads" class="btn btn-sm btn-primary" type="button">
+            Import to sheet
+          </button>
+        </div>
+        <p id="leads-upload-message" class="leads-message" hidden></p>
+      </section>
+
+      <section class="panel">
+        <h2>Health</h2>
+        <div id="health-status" class="health health-unknown">Checking…</div>
+      </section>
+    </aside>
+
+    <div class="content">
+      <section class="panel">
+        <h2>Pipeline Steps</h2>
+        <ol id="steps-list" class="steps-list">
+          {% for step in steps %}
+          {% if step.id == 4 %}
+          <li class="step-card step-card-manual-note" data-step-id="4">
+            <div class="step-header">
+              <span class="step-number">4</span>
+              <div class="step-info">
+                <h3>{{ step.name }}</h3>
+                <p class="step-manual-note">
+                  Do this step manually: scrape Facebook pages with Mini Mouse Macro
+                  and paste scrape data into your sheet yourself. This app does not run
+                  or track page scraping.
+                </p>
+              </div>
+            </div>
+          </li>
+          {% else %}
+          <li class="step-card" data-step-id="{{ step.id }}">
+            <div class="step-header">
+              <span class="step-number">{{ step.id }}</span>
+              <div class="step-info">
+                <h3>{{ step.name }}</h3>
+                <p>{{ step.description }}</p>
+              </div>
+              <span class="step-status badge badge-idle" data-status>idle</span>
+            </div>
+            <div class="step-progress" data-progress-wrap hidden>
+              <div class="step-progress-meta">
+                <span data-progress-label>Running…</span>
+                <span data-progress-pct>0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" data-progress-bar></div>
+              </div>
+              <span class="progress-eta" data-progress-eta></span>
+            </div>
+            <div class="step-footer">
+              <span class="step-message" data-message>—</span>
+              <button class="btn btn-sm btn-secondary btn-run-step" data-step-id="{{ step.id }}" type="button">
+                Run step
+              </button>
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ol>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Logs</h2>
+          <button id="btn-clear-logs" class="btn btn-sm btn-ghost" type="button">Clear view</button>
+        </div>
+        <pre id="log-panel" class="log-panel">Waiting for pipeline activity…</pre>
+      </section>
+    </div>
+  </main>
+
+  <div id="leads-upload-modal" class="modal-overlay" hidden aria-hidden="true">
+    <div
+      class="modal-card modal-card-leads"
+      role="dialog"
+      aria-labelledby="leads-upload-title"
+      aria-modal="true"
+    >
+      <h2 id="leads-upload-title">Import leads (Step 1)</h2>
+      <p class="modal-subtitle">
+        Paste or upload a list with <strong>Facebook Link</strong> and
+        <strong>Business Name</strong> (CSV, TSV, or one line per lead).
+      </p>
+      <label class="modal-label" for="modal-leads-input">Lead list</label>
+      <textarea
+        id="modal-leads-input"
+        class="modal-leads-input"
+        rows="10"
+        spellcheck="false"
+        placeholder="https://facebook.com/..., Business Name&#10;https://facebook.com/..., Another Business"
+      ></textarea>
+      <div class="modal-leads-actions">
+        <label class="btn btn-sm btn-secondary leads-file-label" for="modal-leads-file-input">
+          Choose file
+        </label>
+        <input
+          id="modal-leads-file-input"
+          class="leads-file-input"
+          type="file"
+          accept=".csv,.tsv,.txt,text/csv,text/plain"
+        />
+      </div>
+      <p id="modal-leads-message" class="leads-message" hidden></p>
+      <div class="modal-actions">
+        <button id="leads-upload-cancel" class="btn btn-secondary" type="button">Cancel</button>
+        <button id="leads-upload-confirm" class="btn btn-primary" type="button">
+          Import and run
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="notification-stack" class="notification-stack" aria-live="polite" aria-label="Notifications"></div>
+
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
