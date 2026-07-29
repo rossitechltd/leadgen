@@ -17,6 +17,7 @@ from app.pipeline.steps import (
     step5_ai_qualify,
     step6_entity_clarify,
     step6_finalize,
+    step7_outreach_messages,
 )
 from app.pipeline.steps.base import PipelineContext, StepResult, StepStatus
 from app.sheets.client import SheetsClient, get_sheets_client
@@ -85,6 +86,13 @@ STEP_DEFINITIONS: list[StepDefinition] = [
     ),
     StepDefinition(
         id=8,
+        name="Outreach Messages",
+        description="Random outreach template → Message1 for surviving leads ({firstname} or there)",
+        run_fn=step7_outreach_messages.run,
+        estimated_duration_secs=30,
+    ),
+    StepDefinition(
+        id=9,
         name="Finalize",
         description="Move qualified leads to a dated Finalised sheet and clear Dynamic Lead Sheet",
         run_fn=step6_finalize.run,

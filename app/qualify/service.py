@@ -189,7 +189,7 @@ class AIQualifyService:
                 website_link = str(row.get(COL_WEBSITE_LINK) or "").strip()
 
                 row_updates = dict(website_status.as_row_fields())
-                if decision.keep and not already_qualified:
+                if decision.keep:
                     row_updates[COL_VA] = "qualified"
                 _queue_sheet_update(row_index, row_updates)
 

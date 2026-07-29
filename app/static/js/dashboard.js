@@ -301,6 +301,19 @@
     }
 
     if (step.id === 8) {
+      const updated = stats.updated || 0;
+      if (updated > 0) {
+        const named = stats.with_name || 0;
+        const there = stats.with_there || 0;
+        const parts = [updated + " message" + (updated === 1 ? "" : "s")];
+        if (named) parts.push(named + " named");
+        if (there) parts.push(there + " generic");
+        return { title: "Outreach messages added", detail: parts.join(", ") };
+      }
+      return { title: "No outreach messages", detail: step.message || "" };
+    }
+
+    if (step.id === 9) {
       const moved = stats.moved || 0;
       const sheet = stats.destination_sheet;
       if (moved > 0) {
